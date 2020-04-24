@@ -13,7 +13,9 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -23,72 +25,71 @@
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
   <style>
+    .dd {
+      max-width: 100%;
+      top: 88px;
+      margin: 0 auto;
+      display: block;
+      vertical-align: top;
+    }
 
-.dd {
-  max-width: 100%;
-  top: 88px;
-  margin: 0 auto;
-  display: block;
-  vertical-align: top;
-}
+    ol {
+      transition: border-color 2s ease, all 0.1s ease;
+    }
 
-ol {
-  transition: border-color 2s ease, all 0.1s ease;
-}
+    ol.list {
+      padding-top: 2em;
+      padding-left: 15px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
 
-ol.list {
-  padding-top: 2em;
-  padding-left: 15px;
-  max-width: 650px;
-  margin: 0 auto;
-}
+    ol.list .text {
+      float: right;
+      width: 60%;
+    }
 
-ol.list .text {
-  float: right;
-  width: 60%;
-}
+    ol.list h3,
+    ol.list .actions,
+    ol.list label {
+      float: left;
+      width: 30%;
+    }
 
-ol.list h3,
-ol.list .actions,
-ol.list label {
-  float: left;
-  width: 30%;
-}
+    ol.list>li,
+    ol.list>h3 {
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-ol.list > li,
-ol.list > h3 {
-  max-width: 600px;
-  margin: 0 auto;
-}
+    ol.list>h2 {
+      padding-bottom: 6px;
+    }
 
-ol.list > h2 {
-  padding-bottom: 6px;
-}
+    ol.list.To-do {
+      border-left: 2px solid #FFB300;
+    }
 
-ol.list.To-do {
-  border-left: 2px solid #FFB300;
-}
+    ol.list.Gone {
+      border-left: 2px solid #FF3D00;
+    }
 
-ol.list.Gone {
-  border-left: 2px solid #FF3D00;
-}
+    ol.list.progress {
+      border-left: 2px solid #29B6F6;
+    }
 
-ol.list.progress {
-  border-left: 2px solid #29B6F6;
-}
+    ol.list.Done {
+      border-left: 2px solid #8BC34A;
+    }
 
-ol.list.Done {
-  border-left: 2px solid #8BC34A;
-}
+    H2,
+    h1,
+    button {
+      margin-left: 5px;
+      font-family: 'Arbutus Slab', serif;
+    }
 
-H2,
-h1,
-button {
-  margin-left: 5px;
-  font-family: 'Arbutus Slab', serif;
-}
-
-/* h2 {
+    /* h2 {
   color: #607D8B;
 }
 
@@ -97,270 +98,277 @@ h2 .material-icons {
   line-height: 1.5;
 } */
 
-.dd-handle .material-icons {
-  color: #B0BEC5;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 2rem;
-  position: relative;
-  right: 0;
-  color: #607D8B;
-  padding: 5px 16px;
-}
-
-button>.material-icons {
-  line-height: 0.2;
-  position:relative;
-  top:7px;
-}
-
-.dd-item:hover,
-button:hover {
-  color: #00838F;
-  will-change: box-shadow;
-  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .14), 0 3px 1px -6px rgba(0, 0, 0, .2), 2px 5px 3px 0 rgba(0, 0, 0, .12);
-}
-
-button.addbutt {
-  background-color: #EEEEEE;
-  color: #607D8B;
-  width: 100%;
-}
-
-.list > button.addbutt {
-  max-width: 330px;
-}
-
-button:active, button:down, button:focus {box-shadow: 0 0 0 0, 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .12);color:#00838F;}
-button {
-  align-items: center;
-  background-color: #EEEEEE;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  color: #607D8B;
-  position: relative;
-  margin: 0;
-  min-width: 44px;
-  padding: 10px 16px;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1;
-  overflow: hidden;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
+    .dd-handle .material-icons {
+      color: #B0BEC5;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 2rem;
+      position: relative;
+      right: 0;
+      color: #607D8B;
+      padding: 5px 16px;
     }
 
-ol.kanban.To-do {
-  border-top: 5px solid #FFB300;
-}
+    button>.material-icons {
+      line-height: 0.2;
+      position: relative;
+      top: 7px;
+    }
 
-ol.kanban.Gone {
-  border-top: 5px solid #FF3D00;
-}
+    .dd-item:hover,
+    button:hover {
+      color: #00838F;
+      will-change: box-shadow;
+      transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .14), 0 3px 1px -6px rgba(0, 0, 0, .2), 2px 5px 3px 0 rgba(0, 0, 0, .12);
+    }
 
-ol.kanban.progress {
-  border-top: 5px solid #29B6F6;
-}
+    button.addbutt {
+      background-color: #EEEEEE;
+      color: #607D8B;
+      width: 100%;
+    }
 
-ol.kanban.Done {
-  border-top: 5px solid #8BC34A;
-}
+    .list>button.addbutt {
+      max-width: 330px;
+    }
 
-ol.kanban {
-  border-top: 5px solid #78909C;
-  width: 20%;
-  height: auto;
-  margin: 1%;
-  max-width: 250px;
-  min-width: 120px;
-  display: inline-block;
-  vertical-align: top;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-  flex-direction: column;
-  min-height: 200px;
-  z-index: 1;
-  position: relative;
-  background: #fff;
-  padding: 1em;
-  border-radius: 2px;
-}
+    button:active,
+    button:down,
+    button:focus {
+      box-shadow: 0 0 0 0, 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .12);
+      color: #00838F;
+    }
 
-.dd-item {
-  display: block;
-  position: relative;
-  list-style: none;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  min-height: 48px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 16px;
-  min-height: 120px;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-  background: #fff;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
+    button {
+      align-items: center;
+      background-color: #EEEEEE;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      color: #607D8B;
+      position: relative;
+      margin: 0;
+      min-width: 44px;
+      padding: 10px 16px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-.title {
-  align-self: flex-end;
-  color: inherit;
-  display: block;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 24px;
-  line-height: normal;
-  overflow: hidden;
-  -webkit-transform-origin: 149px 48px;
-  transform-origin: 149px 48px;
-  margin: 0;
-}
+    ol.kanban.To-do {
+      border-top: 5px solid #FFB300;
+    }
 
-.text {
-  color: grey;
-  border-top: 1px solid; font-size: 1rem;
-  font-weight: 400;
-  line-height: 18px;
-  overflow: hidden;
-  padding: 16px;
-  width: 90%;
-}
+    ol.kanban.Gone {
+      border-top: 5px solid #FF3D00;
+    }
 
-.actions {
-  border-top: 1px solid rgba(0, 0, 0, .1);
-  font-size: 8px;
-  line-height: normal;
-  width: 100%;
-  color: #B0BEC5;
-  padding: 8px;
-  box-sizing: border-box;
-}
+    ol.kanban.progress {
+      border-top: 5px solid #29B6F6;
+    }
+
+    ol.kanban.Done {
+      border-top: 5px solid #8BC34A;
+    }
+
+    ol.kanban {
+      border-top: 5px solid #78909C;
+      width: 30%;
+      height: auto;
+      margin: 1%;
+      max-width: 370px;
+      min-width: 120px;
+      display: inline-block;
+      vertical-align: top;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      flex-direction: column;
+      min-height: 200px;
+      z-index: 1;
+      position: relative;
+      background: #fff;
+      padding: 1em;
+      border-radius: 2px;
+    }
+
+    .dd-item {
+      display: block;
+      position: relative;
+      list-style: none;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      min-height: 48px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 16px;
+      min-height: 120px;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      background: #fff;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+
+    .title {
+      align-self: flex-end;
+      color: inherit;
+      display: block;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 24px;
+      line-height: normal;
+      overflow: hidden;
+      -webkit-transform-origin: 149px 48px;
+      transform-origin: 149px 48px;
+      margin: 0;
+    }
+
+    .text-custom {
+      color: grey;
+      border-top: 1px solid;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 18px;
+      overflow: hidden;
+      padding: 16px;
+      width: 90%;
+    }
+
+    .actions {
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      font-size: 8px;
+      line-height: normal;
+      width: 100%;
+      color: #B0BEC5;
+      padding: 8px;
+      box-sizing: border-box;
+    }
 
 
-/**
+    /**
  * Nestable
  */
 
-.dd {
-  position: relative;
-  display: block;
-  list-style: none;
-}
+    .dd {
+      position: relative;
+      display: block;
+      list-style: none;
+    }
 
-.dd-list {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+    .dd-list {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-.dd-list .dd-list {
-  padding-left: 30px;
-}
+    .dd-list .dd-list {
+      padding-left: 30px;
+    }
 
-.dd-collapsed .dd-list {
-  display: none;
-}
+    .dd-collapsed .dd-list {
+      display: none;
+    }
 
-.dd-item {
-  display: block;
-  margin: 5px 0;
-  padding: 5px 10px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid #ccc;
-  background: #fafafa;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+    .dd-item {
+      display: block;
+      margin: 5px 0;
+      padding: 5px 10px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
 
-.dd-item:hover {
-  background: #fff;
-}
+    .dd-item:hover {
+      background: #fff;
+    }
 
-.dd-item > button {
-  display: block;
-  position: relative;
-  cursor: move;
-  float: left;
-  width: 25px;
-  height: 20px;
-  margin: 5px 0;
-  padding: 0;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border: 0;
-  background: transparent;
-  font-size: 12px;
-  line-height: 1;
-  text-align: center;
-  font-weight: bold;
-}
+    .dd-item>button {
+      display: block;
+      position: relative;
+      cursor: move;
+      float: left;
+      width: 25px;
+      height: 20px;
+      margin: 5px 0;
+      padding: 0;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 0;
+      background: transparent;
+      font-size: 12px;
+      line-height: 1;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.dd-item > button:before {
-  content: '+';
-  display: block;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  text-indent: 0;
-}
+    .dd-item>button:before {
+      content: '+';
+      display: block;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      text-indent: 0;
+    }
 
-.dd-item > button[data-action="collapse"]:before {
-  content: '<i class="material-icons">filter_none</i>';
-}
+    .dd-item>button[data-action="collapse"]:before {
+      content: '<i class="material-icons">filter_none</i>';
+    }
 
-.dd-placeholder,
-.dd-empty {
-  margin: 5px 0;
-  padding: 0;
-  min-height: 30px;
-  background: #E0E0E0;
-  border: 1px dashed #b6bcbf;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+    .dd-placeholder,
+    .dd-empty {
+      margin: 5px 0;
+      padding: 0;
+      min-height: 30px;
+      background: #E0E0E0;
+      border: 1px dashed #b6bcbf;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
 
-.dd-empty {
-  border: 1px dashed #bbb;
-  min-height: 100px;
-  background-color: #E0E0E0;
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
-}
+    .dd-empty {
+      border: 1px dashed #bbb;
+      min-height: 100px;
+      background-color: #E0E0E0;
+      background-size: 60px 60px;
+      background-position: 0 0, 30px 30px;
+    }
 
-.dd-dragel {
-  position: absolute;
-  pointer-events: none;
-  z-index: 9999;
-}
+    .dd-dragel {
+      position: absolute;
+      pointer-events: none;
+      z-index: 9999;
+    }
 
-.dd-dragel > .dd-item .dd-handle {
-  margin-top: 0;
-  cursor: move;
-}
+    .dd-dragel>.dd-item .dd-handle {
+      margin-top: 0;
+      cursor: move;
+    }
 
-.dd-dragel .dd-item {
-  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .5);
-  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .5);
-  cursor: move;
-}
+    .dd-dragel .dd-item {
+      -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .5);
+      box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .5);
+      cursor: move;
+    }
   </style>
 
 </head>
@@ -388,8 +396,8 @@ ol.kanban {
       <li class="nav-item active">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-         <span>Home</span></a>
-      </li> 
+          <span>Home</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -524,7 +532,8 @@ ol.kanban {
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
+                aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -538,14 +547,17 @@ ol.kanban {
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar por..."
+                      aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
                         <i class="fas fa-search fa-sm"></i>
@@ -558,7 +570,8 @@ ol.kanban {
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Luís Fernando</span>
                 <img class="img-profile rounded-circle" src="./img/man.jpg">
               </a>
@@ -635,8 +648,8 @@ ol.kanban {
               </div>
             </div>
 
-             <!-- Earnings (Monthly) Card Example -->
-             <div class="col-xl-3 col-md-6 mb-4">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -648,7 +661,8 @@ ol.kanban {
                         </div>
                         <div class="col">
                           <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                              aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </div>
                       </div>
@@ -703,643 +717,634 @@ ol.kanban {
                     </div> -->
                   </div>
                 </div>
-             
-              <div class="card shadow mb-4">
-                <div class="row">
-                  <div class="col-md-12">
-                    <!-- <div id="myKanban"></div> -->
-                   <!-- Simple MDL Progress Bar -->
-<div id="p1" class="mdl-progress mdl-js-progress"></div>
-<div class="dd">
 
-  <ol class="kanban To-do">
-    <div class="kanban__title">
-      <h2>A fazer</h2></div>
-   <li class="dd-item" data-id="1">
-      <h3 class="title dd-handle" >Do the dishes<i class=" material-icons ">filter_none</i></h3>
-        <div class="text" contenteditable="true">wwPaul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer 
-    
-     </div> <i class="material-icons" id="label blue">label</i><div class="actions">
-        <i class="material-icons" id="color">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    </li>
-    <li class="dd-item" data-id="4">
-      <h3 class="title dd-handle"><i class=" material-icons ">filter_none</i>log-in bug</h3>
-        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
-        <i class="material-icons">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    </li>
-    <li class="dd-item" data-id="3">
-      <h3 class="title dd-handle"><i class=" material-icons ">filter_none</i>UX design</h3>
-        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
-        <i class="material-icons">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    
-    <div class="actions">
-      <button class="addbutt"><i class="material-icons">control_point</i> Add new</button>
-    </div>
-  </ol>
-  <ol class="kanban progress">
-    <h2>Fazendo</h2>
-      <li class="dd-item" data-id="5">
-      <h3 class="title dd-handle"><i class=" material-icons ">filter_none</i>  title of job</h3>
-        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
-        <i class="material-icons">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    </li>
-  </ol>
-  <ol class="kanban  Done">
-    <h2>Feito</h2>
-      <li class="dd-item" data-id="5">
-      <h3 class="title dd-handle"><i class=" material-icons ">filter_none</i>  title of job</h3>
-        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
-        <i class="material-icons">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    </li></li><li class="dd-item" data-id="2">
-      <h3 class="title dd-handle"><i class=" material-icons ">filter_none</i>  title of job</h3>
-        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
-        <i class="material-icons">palette</i><i class="material-icons">edit</i><i class="material-icons">insert_link</i><i class="material-icons">attach_file</i></div>
-      
-    </li>
-    <div class="actions">
-      <button class="addbutt"><i class="material-icons">control_point</i> Add new</button>
-    </div>
-  </ol>
+                <div class="card shadow mb-4">
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <!-- <div id="myKanban"></div> -->
+                      <!-- Simple MDL Progress Bar -->
+                      <div id="p1" class="mdl-progress mdl-js-progress"></div>
+                      <!-- <div class="dd"> -->
 
-</div>
-<!-- <menu class="kanban"><button><i class="material-icons">settings</i></button> <button><i class="material-icons">chevron_left</i></button>
-  <button class="viewkanban"><i class="material-icons ">view_column</i></button>
-  <button class="viewlist"><i class="material-icons">view_list</i></button>
-  <button><i class="material-icons">playlist_add</i> Add new Column</button></menu> -->
+                        <ol class="kanban To-do">
+                          <div class="kanban__title">
+                            <h2>A fazer</h2>
+                          </div>
+                          <li class="dd-item" data-id="1">
+                            <!-- <h3 class="title dd-handle">Do the dishes</h3> -->
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Matéria: </code>
+                              <code class="text-gray-600">Direito administrativo</code>
+                            </div>
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Assunto: </code>
+                              <code class="text-gray-600">Ato discricionário</code>
+                            </div>
+                            <div class="text-custom" contenteditable="true">wwPaul Rand once said, “The public is more familiar
+                              with bad fucking design than good design. It is, in effect, conditioned to prefer
+                          </li>
+                        </ol>
+                        <ol class="kanban progress">
+                          <h2>Fazendo</h2>
+                          <li class="dd-item" data-id="5">
+                            <!-- <h3 class="title dd-handle">title of job</h3> -->
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Matéria: </code>
+                              <code class="text-gray-600">Direito administrativo</code>
+                            </div>
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Assunto: </code>
+                              <code class="text-gray-600">Ato discricionário</code>
+                            </div>
+                            <div class="text-custom" contenteditable="true">Paul Rand once said, “The public is more familiar
+                              with bad fucking design than good design. It is, in effect, conditioned to prefer bad
+                              design,</div>
+                          </li>
+                        </ol>
+                        <ol class="kanban  Done">
+                          <h2>Feito</h2>
+                          <li class="dd-item" data-id="5">
+                            <!-- <h3 class="title dd-handle">title of job</h3> -->
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Matéria: </code>
+                              <code class="text-gray-600">Direito administrativo</code>
+                            </div>
+                            <div class="mb-2 form-group">
+                              <code class="text-gray-800">Assunto: </code>
+                              <code class="text-gray-600">Ato discricionário</code>
+                            </div>
+                            <div class="text-custom" contenteditable="true">Paul Rand once said, “The public is more familiar
+                              with bad fucking design than good design. It is, in effect, conditioned to prefer bad
+                              design,</div>
+                          </li>
+                          </li>
+                        </ol>
 
-                    <button class="btn btn-primary" id="addDefault">Novo cartão</button>
-                    <button class="btn btn-primary" id="addToDo">Editar cartão</button>
-                    <button class="btn btn-danger" id="removeBoard">Remover cartão</button>
+                      <!-- </div> -->
+
+                      <!-- <button class="btn btn-primary" id="addDefault">Novo cartão</button>
+                      <button class="btn btn-primary" id="addToDo">Editar cartão</button>
+                      <button class="btn btn-danger" id="removeBoard">Remover cartão</button> -->
+                      <div class="form-group mt-4">
+                        <a href="#" class="btn btn-primary btn-icon-split" onclick="modifica_texto()">
+                          <span class="icon text-white-50">
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                          <span class="text">Criar cartão</span>
+                        </a>
+
+                        <a href="#" class="btn btn-danger btn-icon-split" onclick="modifica_texto()">
+                          <span class="icon text-white-50">
+                            <i class="fas fa-trash"></i>
+                          </span>
+                          <span class="text">Remover cartão</span>
+                        </a>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
+                </div>
+
               </div>
+            </div>
+
+            <!-- </div> -->
+            <!-- /.container-fluid -->
 
           </div>
-        </div>
+          <!-- End of Main Content -->
 
-        <!-- </div> -->
-        <!-- /.container-fluid -->
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>Todos os direitos reservados &copy;</span>
+              </div>
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
 
       </div>
-      <!-- End of Main Content -->
+      <!-- End of Page Wrapper -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Todos os direitos reservados &copy;</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
 
-    </div>
-    <!-- End of Content Wrapper -->
+      <script>
 
-  </div>
-  <!-- End of Page Wrapper -->
+        /*!
+         * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
+         * Dual-licensed under the BSD or MIT licenses
+         */
+        document.querySelector('#p1').addEventListener('mdl-componentupgraded', function () {
+          this.MaterialProgress.setProgress(44);
+        });
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+        ; (function ($, window, document, undefined) {
+          var hasTouch = 'ontouchstart' in document;
 
-  <script>
+          /**
+           * Detect CSS pointer-events property
+           * events are normally disabled on the dragging element to avoid conflicts
+           * https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
+           */
+          var hasPointerEvents = (function () {
+            var el = document.createElement('div'),
+              docEl = document.documentElement;
+            if (!('pointerEvents' in el.style)) {
+              return false;
+            }
+            el.style.pointerEvents = 'auto';
+            el.style.pointerEvents = 'x';
+            docEl.appendChild(el);
+            var supports = window.getComputedStyle && window.getComputedStyle(el, '').pointerEvents === 'auto';
+            docEl.removeChild(el);
+            return !!supports;
+          })();
 
-/*!
- * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
- * Dual-licensed under the BSD or MIT licenses
- */
- document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-    this.MaterialProgress.setProgress(44);
-  });
+          var defaults = {
+            listNodeName: 'ol',
+            itemNodeName: 'li',
+            rootClass: 'dd',
+            listClass: 'dd-list',
+            itemClass: 'dd-item',
+            dragClass: 'dd-dragel',
+            handleClass: 'dd-handle',
+            collapsedClass: 'dd-collapsed',
+            placeClass: 'dd-placeholder',
+            noDragClass: 'dd-nodrag',
+            emptyClass: 'dd-empty',
+            expandBtnHTML: '<button data-action="expand" type="button">Expand</button>',
+            collapseBtnHTML: '<button data-action="collapse" type="button">Collapse</button>',
+            group: 0,
+            maxDepth: 5,
+            threshold: 20
+          };
 
- ;(function($, window, document, undefined)
-{
-    var hasTouch = 'ontouchstart' in document;
+          function Plugin(element, options) {
+            this.w = $(document);
+            this.el = $(element);
+            this.options = $.extend({}, defaults, options);
+            this.init();
+          }
 
-    /**
-     * Detect CSS pointer-events property
-     * events are normally disabled on the dragging element to avoid conflicts
-     * https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
-     */
-    var hasPointerEvents = (function()
-    {
-        var el    = document.createElement('div'),
-            docEl = document.documentElement;
-        if (!('pointerEvents' in el.style)) {
-            return false;
-        }
-        el.style.pointerEvents = 'auto';
-        el.style.pointerEvents = 'x';
-        docEl.appendChild(el);
-        var supports = window.getComputedStyle && window.getComputedStyle(el, '').pointerEvents === 'auto';
-        docEl.removeChild(el);
-        return !!supports;
-    })();
+          Plugin.prototype = {
 
-    var defaults = {
-            listNodeName    : 'ol',
-            itemNodeName    : 'li',
-            rootClass       : 'dd',
-            listClass       : 'dd-list',
-            itemClass       : 'dd-item',
-            dragClass       : 'dd-dragel',
-            handleClass     : 'dd-handle',
-            collapsedClass  : 'dd-collapsed',
-            placeClass      : 'dd-placeholder',
-            noDragClass     : 'dd-nodrag',
-            emptyClass      : 'dd-empty',
-            expandBtnHTML   : '<button data-action="expand" type="button">Expand</button>',
-            collapseBtnHTML : '<button data-action="collapse" type="button">Collapse</button>',
-            group           : 0,
-            maxDepth        : 5,
-            threshold       : 20
-        };
+            init: function () {
+              var list = this;
 
-    function Plugin(element, options)
-    {
-        this.w  = $(document);
-        this.el = $(element);
-        this.options = $.extend({}, defaults, options);
-        this.init();
-    }
+              list.reset();
 
-    Plugin.prototype = {
+              list.el.data('nestable-group', this.options.group);
 
-        init: function()
-        {
-            var list = this;
+              list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
 
-            list.reset();
-
-            list.el.data('nestable-group', this.options.group);
-
-            list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
-
-            $.each(this.el.find(list.options.itemNodeName), function(k, el) {
+              $.each(this.el.find(list.options.itemNodeName), function (k, el) {
                 list.setParent($(el));
-            });
+              });
 
-            list.el.on('click', 'button', function(e) {
+              list.el.on('click', 'button', function (e) {
                 if (list.dragEl) {
-                    return;
+                  return;
                 }
                 var target = $(e.currentTarget),
-                    action = target.data('action'),
-                    item   = target.parent(list.options.itemNodeName);
+                  action = target.data('action'),
+                  item = target.parent(list.options.itemNodeName);
                 if (action === 'collapse') {
-                    list.collapseItem(item);
+                  list.collapseItem(item);
                 }
                 if (action === 'expand') {
-                    list.expandItem(item);
+                  list.expandItem(item);
                 }
-            });
+              });
 
-            var onStartEvent = function(e)
-            {
+              var onStartEvent = function (e) {
                 var handle = $(e.target);
                 if (!handle.hasClass(list.options.handleClass)) {
-                    if (handle.closest('.' + list.options.noDragClass).length) {
-                        return;
-                    }
-                    handle = handle.closest('.' + list.options.handleClass);
+                  if (handle.closest('.' + list.options.noDragClass).length) {
+                    return;
+                  }
+                  handle = handle.closest('.' + list.options.handleClass);
                 }
 
                 if (!handle.length || list.dragEl) {
-                    return;
+                  return;
                 }
 
                 list.isTouch = /^touch/.test(e.type);
                 if (list.isTouch && e.touches.length !== 1) {
-                    return;
+                  return;
                 }
 
                 e.preventDefault();
                 list.dragStart(e.touches ? e.touches[0] : e);
-            };
+              };
 
-            var onMoveEvent = function(e)
-            {
+              var onMoveEvent = function (e) {
                 if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragMove(e.touches ? e.touches[0] : e);
+                  e.preventDefault();
+                  list.dragMove(e.touches ? e.touches[0] : e);
                 }
-            };
+              };
 
-            var onEndEvent = function(e)
-            {
+              var onEndEvent = function (e) {
                 if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragStop(e.touches ? e.touches[0] : e);
+                  e.preventDefault();
+                  list.dragStop(e.touches ? e.touches[0] : e);
                 }
-            };
+              };
 
-            if (hasTouch) {
+              if (hasTouch) {
                 list.el[0].addEventListener('touchstart', onStartEvent, false);
                 window.addEventListener('touchmove', onMoveEvent, false);
                 window.addEventListener('touchend', onEndEvent, false);
                 window.addEventListener('touchcancel', onEndEvent, false);
-            }
+              }
 
-            list.el.on('mousedown', onStartEvent);
-            list.w.on('mousemove', onMoveEvent);
-            list.w.on('mouseup', onEndEvent);
+              list.el.on('mousedown', onStartEvent);
+              list.w.on('mousemove', onMoveEvent);
+              list.w.on('mouseup', onEndEvent);
 
-        },
+            },
 
-        serialize: function()
-        {
-            var data,
+            serialize: function () {
+              var data,
                 depth = 0,
-                list  = this;
-                step  = function(level, depth)
-                {
-                    var array = [ ],
-                        items = level.children(list.options.itemNodeName);
-                    items.each(function()
-                    {
-                        var li   = $(this),
-                            item = $.extend({}, li.data()),
-                            sub  = li.children(list.options.listNodeName);
-                        if (sub.length) {
-                            item.children = step(sub, depth + 1);
-                        }
-                        array.push(item);
-                    });
-                    return array;
-                };
-            data = step(list.el.find(list.options.listNodeName).first(), depth);
-            return data;
-        },
+                list = this;
+              step = function (level, depth) {
+                var array = [],
+                  items = level.children(list.options.itemNodeName);
+                items.each(function () {
+                  var li = $(this),
+                    item = $.extend({}, li.data()),
+                    sub = li.children(list.options.listNodeName);
+                  if (sub.length) {
+                    item.children = step(sub, depth + 1);
+                  }
+                  array.push(item);
+                });
+                return array;
+              };
+              data = step(list.el.find(list.options.listNodeName).first(), depth);
+              return data;
+            },
 
-        serialise: function()
-        {
-            return this.serialize();
-        },
+            serialise: function () {
+              return this.serialize();
+            },
 
-        reset: function()
-        {
-            this.mouse = {
-                offsetX   : 0,
-                offsetY   : 0,
-                startX    : 0,
-                startY    : 0,
-                lastX     : 0,
-                lastY     : 0,
-                nowX      : 0,
-                nowY      : 0,
-                distX     : 0,
-                distY     : 0,
-                dirAx     : 0,
-                dirX      : 0,
-                dirY      : 0,
-                lastDirX  : 0,
-                lastDirY  : 0,
-                distAxX   : 0,
-                distAxY   : 0
-            };
-            this.isTouch    = false;
-            this.moving     = false;
-            this.dragEl     = null;
-            this.dragRootEl = null;
-            this.dragDepth  = 0;
-            this.hasNewRoot = false;
-            this.pointEl    = null;
-        },
+            reset: function () {
+              this.mouse = {
+                offsetX: 0,
+                offsetY: 0,
+                startX: 0,
+                startY: 0,
+                lastX: 0,
+                lastY: 0,
+                nowX: 0,
+                nowY: 0,
+                distX: 0,
+                distY: 0,
+                dirAx: 0,
+                dirX: 0,
+                dirY: 0,
+                lastDirX: 0,
+                lastDirY: 0,
+                distAxX: 0,
+                distAxY: 0
+              };
+              this.isTouch = false;
+              this.moving = false;
+              this.dragEl = null;
+              this.dragRootEl = null;
+              this.dragDepth = 0;
+              this.hasNewRoot = false;
+              this.pointEl = null;
+            },
 
-        expandItem: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action="expand"]').hide();
-            li.children('[data-action="collapse"]').show();
-            li.children(this.options.listNodeName).show();
-        },
+            expandItem: function (li) {
+              li.removeClass(this.options.collapsedClass);
+              li.children('[data-action="expand"]').hide();
+              li.children('[data-action="collapse"]').show();
+              li.children(this.options.listNodeName).show();
+            },
 
-        collapseItem: function(li)
-        {
-            var lists = li.children(this.options.listNodeName);
-            if (lists.length) {
+            collapseItem: function (li) {
+              var lists = li.children(this.options.listNodeName);
+              if (lists.length) {
                 li.addClass(this.options.collapsedClass);
                 li.children('[data-action="collapse"]').hide();
                 li.children('[data-action="expand"]').show();
                 li.children(this.options.listNodeName).hide();
-            }
-        },
+              }
+            },
 
-        expandAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
+            expandAll: function () {
+              var list = this;
+              list.el.find(list.options.itemNodeName).each(function () {
                 list.expandItem($(this));
-            });
-        },
+              });
+            },
 
-        collapseAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
+            collapseAll: function () {
+              var list = this;
+              list.el.find(list.options.itemNodeName).each(function () {
                 list.collapseItem($(this));
-            });
-        },
+              });
+            },
 
-        setParent: function(li)
-        {
-            if (li.children(this.options.listNodeName).length) {
+            setParent: function (li) {
+              if (li.children(this.options.listNodeName).length) {
                 li.prepend($(this.options.expandBtnHTML));
                 li.prepend($(this.options.collapseBtnHTML));
-            }
-            li.children('[data-action="expand"]').hide();
-        },
+              }
+              li.children('[data-action="expand"]').hide();
+            },
 
-        unsetParent: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action]').remove();
-            li.children(this.options.listNodeName).remove();
-        },
+            unsetParent: function (li) {
+              li.removeClass(this.options.collapsedClass);
+              li.children('[data-action]').remove();
+              li.children(this.options.listNodeName).remove();
+            },
 
-        dragStart: function(e)
-        {
-            var mouse    = this.mouse,
-                target   = $(e.target),
+            dragStart: function (e) {
+              var mouse = this.mouse,
+                target = $(e.target),
                 dragItem = target.closest(this.options.itemNodeName);
 
-            this.placeEl.css('height', dragItem.height());
+              this.placeEl.css('height', dragItem.height());
 
-            mouse.offsetX = e.offsetX !== undefined ? e.offsetX : e.pageX - target.offset().left;
-            mouse.offsetY = e.offsetY !== undefined ? e.offsetY : e.pageY - target.offset().top;
-            mouse.startX = mouse.lastX = e.pageX;
-            mouse.startY = mouse.lastY = e.pageY;
+              mouse.offsetX = e.offsetX !== undefined ? e.offsetX : e.pageX - target.offset().left;
+              mouse.offsetY = e.offsetY !== undefined ? e.offsetY : e.pageY - target.offset().top;
+              mouse.startX = mouse.lastX = e.pageX;
+              mouse.startY = mouse.lastY = e.pageY;
 
-            this.dragRootEl = this.el;
+              this.dragRootEl = this.el;
 
-            this.dragEl = $(document.createElement(this.options.listNodeName)).addClass(this.options.listClass + ' ' + this.options.dragClass);
-            this.dragEl.css('width', dragItem.width());
+              this.dragEl = $(document.createElement(this.options.listNodeName)).addClass(this.options.listClass + ' ' + this.options.dragClass);
+              this.dragEl.css('width', dragItem.width());
 
-            dragItem.after(this.placeEl);
-            dragItem[0].parentNode.removeChild(dragItem[0]);
-            dragItem.appendTo(this.dragEl);
+              dragItem.after(this.placeEl);
+              dragItem[0].parentNode.removeChild(dragItem[0]);
+              dragItem.appendTo(this.dragEl);
 
-            $(document.body).append(this.dragEl);
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
-            // total depth of dragging item
-            var i, depth,
+              $(document.body).append(this.dragEl);
+              this.dragEl.css({
+                'left': e.pageX - mouse.offsetX,
+                'top': e.pageY - mouse.offsetY
+              });
+              // total depth of dragging item
+              var i, depth,
                 items = this.dragEl.find(this.options.itemNodeName);
-            for (i = 0; i < items.length; i++) {
+              for (i = 0; i < items.length; i++) {
                 depth = $(items[i]).parents(this.options.listNodeName).length;
                 if (depth > this.dragDepth) {
-                    this.dragDepth = depth;
+                  this.dragDepth = depth;
                 }
-            }
-        },
+              }
+            },
 
-        dragStop: function(e)
-        {
-            var el = this.dragEl.children(this.options.itemNodeName).first();
-            el[0].parentNode.removeChild(el[0]);
-            this.placeEl.replaceWith(el);
+            dragStop: function (e) {
+              var el = this.dragEl.children(this.options.itemNodeName).first();
+              el[0].parentNode.removeChild(el[0]);
+              this.placeEl.replaceWith(el);
 
-            this.dragEl.remove();
-            this.el.trigger('change');
-            if (this.hasNewRoot) {
+              this.dragEl.remove();
+              this.el.trigger('change');
+              if (this.hasNewRoot) {
                 this.dragRootEl.trigger('change');
-            }
-            this.reset();
-        },
+              }
+              this.reset();
+            },
 
-        dragMove: function(e)
-        {
-            var list, parent, prev, next, depth,
-                opt   = this.options,
+            dragMove: function (e) {
+              var list, parent, prev, next, depth,
+                opt = this.options,
                 mouse = this.mouse;
 
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
+              this.dragEl.css({
+                'left': e.pageX - mouse.offsetX,
+                'top': e.pageY - mouse.offsetY
+              });
 
-            // mouse position last events
-            mouse.lastX = mouse.nowX;
-            mouse.lastY = mouse.nowY;
-            // mouse position this events
-            mouse.nowX  = e.pageX;
-            mouse.nowY  = e.pageY;
-            // distance mouse moved between events
-            mouse.distX = mouse.nowX - mouse.lastX;
-            mouse.distY = mouse.nowY - mouse.lastY;
-            // direction mouse was moving
-            mouse.lastDirX = mouse.dirX;
-            mouse.lastDirY = mouse.dirY;
-            // direction mouse is now moving (on both axis)
-            mouse.dirX = mouse.distX === 0 ? 0 : mouse.distX > 0 ? 1 : -1;
-            mouse.dirY = mouse.distY === 0 ? 0 : mouse.distY > 0 ? 1 : -1;
-            // axis mouse is now moving on
-            var newAx   = Math.abs(mouse.distX) > Math.abs(mouse.distY) ? 1 : 0;
+              // mouse position last events
+              mouse.lastX = mouse.nowX;
+              mouse.lastY = mouse.nowY;
+              // mouse position this events
+              mouse.nowX = e.pageX;
+              mouse.nowY = e.pageY;
+              // distance mouse moved between events
+              mouse.distX = mouse.nowX - mouse.lastX;
+              mouse.distY = mouse.nowY - mouse.lastY;
+              // direction mouse was moving
+              mouse.lastDirX = mouse.dirX;
+              mouse.lastDirY = mouse.dirY;
+              // direction mouse is now moving (on both axis)
+              mouse.dirX = mouse.distX === 0 ? 0 : mouse.distX > 0 ? 1 : -1;
+              mouse.dirY = mouse.distY === 0 ? 0 : mouse.distY > 0 ? 1 : -1;
+              // axis mouse is now moving on
+              var newAx = Math.abs(mouse.distX) > Math.abs(mouse.distY) ? 1 : 0;
 
-            // do nothing on first move
-            if (!mouse.moving) {
-                mouse.dirAx  = newAx;
+              // do nothing on first move
+              if (!mouse.moving) {
+                mouse.dirAx = newAx;
                 mouse.moving = true;
                 return;
-            }
+              }
 
-            // calc distance moved on this axis (and direction)
-            if (mouse.dirAx !== newAx) {
+              // calc distance moved on this axis (and direction)
+              if (mouse.dirAx !== newAx) {
                 mouse.distAxX = 0;
                 mouse.distAxY = 0;
-            } else {
+              } else {
                 mouse.distAxX += Math.abs(mouse.distX);
                 if (mouse.dirX !== 0 && mouse.dirX !== mouse.lastDirX) {
-                    mouse.distAxX = 0;
+                  mouse.distAxX = 0;
                 }
                 mouse.distAxY += Math.abs(mouse.distY);
                 if (mouse.dirY !== 0 && mouse.dirY !== mouse.lastDirY) {
-                    mouse.distAxY = 0;
+                  mouse.distAxY = 0;
                 }
-            }
-            mouse.dirAx = newAx;
+              }
+              mouse.dirAx = newAx;
 
-            /**
-             * move horizontal
-             */
-            if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
+              /**
+               * move horizontal
+               */
+              if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
                 // reset move distance on x-axis for new phase
                 mouse.distAxX = 0;
                 prev = this.placeEl.prev(opt.itemNodeName);
                 // increase horizontal level if previous sibling exists and is not collapsed
                 if (mouse.distX > 0 && prev.length && !prev.hasClass(opt.collapsedClass)) {
-                    // cannot increase level when item above is collapsed
-                    list = prev.find(opt.listNodeName).last();
-                    // check if depth limit has reached
-                    depth = this.placeEl.parents(opt.listNodeName).length;
-                    if (depth + this.dragDepth <= opt.maxDepth) {
-                        // create new sub-level if one doesn't exist
-                        if (!list.length) {
-                            list = $('<' + opt.listNodeName + '/>').addClass(opt.listClass);
-                            list.append(this.placeEl);
-                            prev.append(list);
-                            this.setParent(prev);
-                        } else {
-                            // else append to next level up
-                            list = prev.children(opt.listNodeName).last();
-                            list.append(this.placeEl);
-                        }
+                  // cannot increase level when item above is collapsed
+                  list = prev.find(opt.listNodeName).last();
+                  // check if depth limit has reached
+                  depth = this.placeEl.parents(opt.listNodeName).length;
+                  if (depth + this.dragDepth <= opt.maxDepth) {
+                    // create new sub-level if one doesn't exist
+                    if (!list.length) {
+                      list = $('<' + opt.listNodeName + '/>').addClass(opt.listClass);
+                      list.append(this.placeEl);
+                      prev.append(list);
+                      this.setParent(prev);
+                    } else {
+                      // else append to next level up
+                      list = prev.children(opt.listNodeName).last();
+                      list.append(this.placeEl);
                     }
+                  }
                 }
                 // decrease horizontal level
                 if (mouse.distX < 0) {
-                    // we can't decrease a level if an item preceeds the current one
-                    next = this.placeEl.next(opt.itemNodeName);
-                    if (!next.length) {
-                        parent = this.placeEl.parent();
-                        this.placeEl.closest(opt.itemNodeName).after(this.placeEl);
-                        if (!parent.children().length) {
-                            this.unsetParent(parent.parent());
-                        }
+                  // we can't decrease a level if an item preceeds the current one
+                  next = this.placeEl.next(opt.itemNodeName);
+                  if (!next.length) {
+                    parent = this.placeEl.parent();
+                    this.placeEl.closest(opt.itemNodeName).after(this.placeEl);
+                    if (!parent.children().length) {
+                      this.unsetParent(parent.parent());
                     }
+                  }
                 }
-            }
+              }
 
-            var isEmpty = false;
+              var isEmpty = false;
 
-            // find list item under cursor
-            if (!hasPointerEvents) {
+              // find list item under cursor
+              if (!hasPointerEvents) {
                 this.dragEl[0].style.visibility = 'hidden';
-            }
-            this.pointEl = $(document.elementFromPoint(e.pageX - document.body.scrollLeft, e.pageY - (window.pageYOffset || document.documentElement.scrollTop)));
-            if (!hasPointerEvents) {
+              }
+              this.pointEl = $(document.elementFromPoint(e.pageX - document.body.scrollLeft, e.pageY - (window.pageYOffset || document.documentElement.scrollTop)));
+              if (!hasPointerEvents) {
                 this.dragEl[0].style.visibility = 'visible';
-            }
-            if (this.pointEl.hasClass(opt.handleClass)) {
+              }
+              if (this.pointEl.hasClass(opt.handleClass)) {
                 this.pointEl = this.pointEl.parent(opt.itemNodeName);
-            }
-            if (this.pointEl.hasClass(opt.emptyClass)) {
+              }
+              if (this.pointEl.hasClass(opt.emptyClass)) {
                 isEmpty = true;
-            }
-            else if (!this.pointEl.length || !this.pointEl.hasClass(opt.itemClass)) {
+              }
+              else if (!this.pointEl.length || !this.pointEl.hasClass(opt.itemClass)) {
                 return;
-            }
+              }
 
-            // find parent list of item under cursor
-            var pointElRoot = this.pointEl.closest('.' + opt.rootClass),
-                isNewRoot   = this.dragRootEl.data('nestable-id') !== pointElRoot.data('nestable-id');
+              // find parent list of item under cursor
+              var pointElRoot = this.pointEl.closest('.' + opt.rootClass),
+                isNewRoot = this.dragRootEl.data('nestable-id') !== pointElRoot.data('nestable-id');
 
-            /**
-             * move vertical
-             */
-            if (!mouse.dirAx || isNewRoot || isEmpty) {
+              /**
+               * move vertical
+               */
+              if (!mouse.dirAx || isNewRoot || isEmpty) {
                 // check if groups match if dragging over new root
                 if (isNewRoot && opt.group !== pointElRoot.data('nestable-group')) {
-                    return;
+                  return;
                 }
                 // check depth limit
                 depth = this.dragDepth - 1 + this.pointEl.parents(opt.listNodeName).length;
                 if (depth > opt.maxDepth) {
-                    return;
+                  return;
                 }
                 var before = e.pageY < (this.pointEl.offset().top + this.pointEl.height() / 2);
-                    parent = this.placeEl.parent();
+                parent = this.placeEl.parent();
                 // if empty create new list to replace empty placeholder
                 if (isEmpty) {
-                    list = $(document.createElement(opt.listNodeName)).addClass(opt.listClass);
-                    list.append(this.placeEl);
-                    this.pointEl.replaceWith(list);
+                  list = $(document.createElement(opt.listNodeName)).addClass(opt.listClass);
+                  list.append(this.placeEl);
+                  this.pointEl.replaceWith(list);
                 }
                 else if (before) {
-                    this.pointEl.before(this.placeEl);
+                  this.pointEl.before(this.placeEl);
                 }
                 else {
-                    this.pointEl.after(this.placeEl);
+                  this.pointEl.after(this.placeEl);
                 }
                 if (!parent.children().length) {
-                    this.unsetParent(parent.parent());
+                  this.unsetParent(parent.parent());
                 }
                 if (!this.dragRootEl.find(opt.itemNodeName).length) {
-                    this.dragRootEl.append('<div class="' + opt.emptyClass + '"/>');
+                  this.dragRootEl.append('<div class="' + opt.emptyClass + '"/>');
                 }
                 // parent root list has changed
                 if (isNewRoot) {
-                    this.dragRootEl = pointElRoot;
-                    this.hasNewRoot = this.el[0] !== this.dragRootEl[0];
+                  this.dragRootEl = pointElRoot;
+                  this.hasNewRoot = this.el[0] !== this.dragRootEl[0];
                 }
+              }
             }
-        }
 
-    };
+          };
 
-    $.fn.nestable = function(params)
-    {
-        var lists  = this,
-            retval = this;
+          $.fn.nestable = function (params) {
+            var lists = this,
+              retval = this;
 
-        lists.each(function()
-        {
-            var plugin = $(this).data("nestable");
+            lists.each(function () {
+              var plugin = $(this).data("nestable");
 
-            if (!plugin) {
+              if (!plugin) {
                 $(this).data("nestable", new Plugin(this, params));
                 $(this).data("nestable-id", new Date().getTime());
-            } else {
+              } else {
                 if (typeof params === 'string' && typeof plugin[params] === 'function') {
-                    retval = plugin[params]();
+                  retval = plugin[params]();
                 }
-            }
+              }
+            });
+
+            return retval || lists;
+          };
+
+        })(window.jQuery || window.Zepto, window, document);
+        /*my scripts*/
+        $('.dd').nestable('serialize');
+        $('.viewlist').on('click', function () {
+          $('ol.kanban').addClass('list')
+          $('ol.list').removeClass('kanban')
+          $('menu').addClass('list')
+          $('menu').removeClass('kanban')
         });
+        $('.viewkanban').on('click', function () {
+          $('ol.list').addClass('kanban')
+          $('ol.kanban').removeClass('list')
+          $('menu').addClass('kanban')
+          $('menu').removeClass('list')
+        });
+        /*colors*/
+        $('#color').spectrum({
+          color: "#f00",
+          change: function (color) {
+            $("#label").text("change called: " + color.toHexString());
+          }
+        });
+      </script>
 
-        return retval || lists;
-    };
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-})(window.jQuery || window.Zepto, window, document);
-/*my scripts*/
-$('.dd').nestable('serialize');
-$('.viewlist').on('click', function() {
-    $('ol.kanban').addClass('list')
-    $('ol.list').removeClass('kanban')
-    $('menu').addClass('list')
-    $('menu').removeClass('kanban')
-   });
-$('.viewkanban').on('click', function() {
-    $('ol.list').addClass('kanban')
-     $('ol.kanban').removeClass('list')
-       $('menu').addClass('kanban')
-     $('menu').removeClass('list')
-   });
-/*colors*/
-$('#color').spectrum({
-    color: "#f00",
-    change: function(color) {
-        $("#label").text("change called: " + color.toHexString());
-    }
-});
-  </script>
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <!-- <script src="js/kanban-custom.js"></script> -->
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+      <!-- Page level plugins -->
+      <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
-  <!-- <script src="js/kanban-custom.js"></script> -->
-
-  <!-- Page level plugins -->
-  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
-
-  <!-- Page level custom scripts -->
-  <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-  <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
+      <!-- Page level custom scripts -->
+      <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+      <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
 </body>
 
